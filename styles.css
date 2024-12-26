@@ -1,0 +1,261 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f7ff; /* Light grayish blue background */
+  color: #333; /* Dark gray text for readability */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6f61; /* Vibrant coral for hover */
+}
+
+/* Hero Section Animation */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: white;
+  background-image: url('elegant-puple-balloon-ribbon-happy-birthday-celebration-card-banner-template-background_35691-35117.avif'); /* Replace with the image URL */
+  background-size: cover; /* Ensures the image covers the whole section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+
+.hero h1 {
+  font-family: "Open Sans", serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#4B0082;
+  animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Gallery Section */
+.gallery {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photos img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Video Section */
+.videos {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #ffe0c3; /* Light peach background */
+}
+
+.videos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ff6f61; /* Vibrant coral for the heading */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Video Grid Layout */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for videos */
+  grid-auto-rows: auto; /* Auto height for rows */
+  gap: 2rem 1.5rem; /* Row and column spacing */
+  justify-items: center;
+  align-items: center;
+}
+
+.video-container .hbd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #ff6f61, #ff9a8b); /* Coral to peach gradient */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  grid-column: 2 / 3; /* Centered in the second column */
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.video-container video:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Add Row Gaps */
+.video-container :nth-child(1),
+.video-container :nth-child(4),
+.video-container :nth-child(6) {
+  margin-top: 2rem; /* Extra gap for these rows */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    grid-template-columns: 1fr; /* Stack videos vertically on small screens */
+  }
+
+  .video-container .hbd {
+    grid-column: 1 / 2; /* Adjust to span full width */
+    margin: 1rem 0;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    grid-template-columns: 1fr; /* Stack videos vertically on small screens */
+  }
+
+  .video-container .hbd {
+    grid-column: 1 / 2; /* Adjust to span full width */
+    margin: 1rem 0;
+  }
+}
+
+/* Friendship Section */
+.friendship {
+  position: relative;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff); /* Soft blue gradient */
+  color: white;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+}
+
+.friendship h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.friendship p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.friendship blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 1.5rem;
+  opacity: 0;
+  transform: translateY(50px);  /* Start below the viewport */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.friendship blockquote.visible {
+  opacity: 1;
+  transform: translateY(0);  /* Move up to its original position */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Fireworks */
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff6f61, #ff9a8b); /* Coral and peach for fireworks */
+  animation: burst 2s ease-out forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
